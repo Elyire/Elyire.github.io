@@ -1,5 +1,5 @@
 ---
-title: Delimiter를활용한 Prompt Formatting 기법 - 정확한 지시사항 전달의 핵심
+title: Delimiter를 활용한 Prompt Formatting 기법 - 정확한 지시사항 전달의 핵심
 date: 2024-03-21 20:00:00 +09:00
 categories: [프롬프트 엔지니어링, 프롬프트 작성기법]
 tags: [프롬프트 작성기법, 시스템 프롬프트]
