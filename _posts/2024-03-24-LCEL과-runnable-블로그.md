@@ -1,5 +1,5 @@
 ---
-title: LangChain Expression Language(LCEL)과 runnable
+title: 랭체인 LangChain Expression Language(LCEL)과 runnable
 date: 2024-03-24 15:02:00 +09:00
 categories: [LLM, LangChain]
 tags: [LangChain, 랭체인]
@@ -9,7 +9,7 @@ pin: false
 
 ## **LangChain Expression Language(LCEL)과 runnable(러너블) 요소**
 
-LangChain은 GPT나 Claude와 같은 LLM(Large Language Model) 기반 애플리케이션 개발을 위한 프레임워크다. 이름에 붙어 있는 'Chain'이라는 단어에서 유추할 수 있듯이 이 프레임워크에서는 LLM 애플리케이션 개발에 필요한 구성 요소들을 다양하게 연결 혹은 엮을 수 있는 도구들을 제공한다.
+LangChain(랭체인)은 GPT나 Claude와 같은 LLM(Large Language Model) 기반 애플리케이션 개발을 위한 프레임워크다. 이름에 붙어 있는 'Chain'이라는 단어에서 유추할 수 있듯이 이 프레임워크에서는 LLM 애플리케이션 개발에 필요한 구성 요소들을 다양하게 연결 혹은 엮을 수 있는 도구들을 제공한다.
 
 최근 LangChain이 대대적으로 업데이트되면서 **LangChain Expression Language(LCEL)**라는 개념이 도입되었는데, 간단히 말해 이는 **LLM 애플리케이션 구성 요소들을 쉽고 유연하게 조합할 수 있도록 해 주는 표현식 체계**라고 할 수 있다.
 
