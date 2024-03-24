@@ -1,6 +1,6 @@
 ---
 title: LangChain Expression Language(LCEL)과 runnable
-date: 2024-03-24 15:01:00 +09:00
+date: 2024-03-24 15:02:00 +09:00
 categories: [LLM, LangChain]
 tags: [LangChain, 랭체인]
 pin: false
