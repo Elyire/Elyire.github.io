@@ -14,18 +14,20 @@ pin: false
 
 첫번째 프롬프트는 이용해 문법 오류 목록을 생성하도록 지시한다.
 
-```prompt_01
+```
 Here is an article:
 <article>
 {ARTICLE}
 </article>
 
-Please identify any grammatical errors in the article. Please only respond with the list of errors, and nothing else. If there are no grammatical errors, say "There are no errors."
+Please identify any grammatical errors in the article. 
+Please only respond with the list of errors, and nothing else. 
+If there are no grammatical errors, say "There are no errors."
 ```
 
 첫번째 프롬프트로부터 생성된 문법 오류 목록을 {ERRORS}라고 한다면, 두 번째 프롬프트에 이를 추가하여 문법 오류 목록에 빠진 내용이 없는지 확인하도록 지시한다.  
 
-```prompt_02
+```
 Here is an article:
 <article>
 {ARTICLE}
@@ -46,9 +48,9 @@ If there are no errors in the article that are missing from the list, say "There
 
 문득 복잡한 프로그래밍 없이, 순수하게 프롬프트 엔지니어링만으로 검색이후 프로세스를 적용해보면 어떨까 하는 생각이 들었다.
 
-1) 쿼리와 유사한 문서들을 기존의 임베딩 벡터를 이용한 유사도 검색을 통해 가져온다. 
-2) LLM을 이용해(즉, 프롬프트를 이용해) retrieved docs 중, 쿼리와 깊은 관련이 있는 문장이나 단락을 리스트업하고 순위를 매긴다. 
-3) 순위가 매겨진 관련 문장 혹은 단락 리스트를 이용해 최종답변을 LLM이 생성하게 한다.
+1) 쿼리와 유사한 문서들을 기존의 임베딩 벡터를 이용한 유사도 검색을 통해 가져온다.  
+2) LLM을 이용해(즉, 프롬프트를 이용해) retrieved docs 중, 쿼리와 깊은 관련이 있는 문장이나 단락을 리스트업하고 순위를 매긴다.  
+3) 순위가 매겨진 관련 문장 혹은 단락 리스트를 이용해 최종답변을 LLM이 생성하게 한다.  
 
 즉, 쿼리에 대한 최종답변에 필요한 내용을 가져오기 위해 시맨틱 검색과 LLM의 능력을 모두 사용하는 것이다. 만약 내가 어떤 retrieved documents를 누군가로부터 받아서,  주어진 질문에 대한 최종 답변을 만들어야 한다면 어떤 프로세스를 거칠까를 생각해 봤다. 나라면 먼저 내게 주어진 retrieved documents(아마도 서류 뭉탱이일수도 있겠다)로부터 질문 답변에 필요한 문장이나 문단을 골라 따로 적어놓고, 이렇게 선별된 문장이나 문단을 활용해서 질문에 대한 최종 답변을 작성할 것 같다는 생각이 들었다. 
 
@@ -96,8 +98,10 @@ template_1 = """
 
 # Instruction
 
-Given the following retrieved documents and the query, extract sentences or passages from the documents that are most relevant to answering the query. 
-Then, provide **only ranked list of the top relevant sentences or passages**. Note that retrieved documents are delimited by XML tag of <retrieved_documents></retrieved_documents>.
+Given the following retrieved documents and the query, 
+extract sentences or passages from the documents that are most relevant to answering the query. 
+Then, provide **only ranked list of the top relevant sentences or passages**. 
+Note that retrieved documents are delimited by XML tag of <retrieved_documents></retrieved_documents>.
 
 
 # Query: {question}
@@ -136,7 +140,9 @@ list_of_relevant_contents = chain1.invoke({"question": question, "context": retr
 
 # list_of_relevant_contents
 """
-"1. 스토아학파는 우주에는 '로고스'라는 신성한 이성 구조가 존재한다고 믿었으며, 이 로고스에 순응하는 것이 행복한 삶을 살 수 있는 방법이라고 가르쳤다.\n2. 스토아학파는 감성보다 이성에 절대 우위를 두며, 고난을 견딜 수 없게 만드는 압도적인 고통이 집착에서 오므로 삶에서 마주치는 그 무엇에도 지나치게 애착을 갖지 않는 법을 배워야 한다고 주장했다.\n3. 스토아학파는 죽음이 한 상태에서 다른 상태로 탈바꿈하는 일일 뿐이라고 가르쳤으며, 죽음에 대한 두려움에서 벗어나 현재를 사랑하며 살아가는 것이 중요하다고 강조했다."
+1. 스토아학파는 우주에는 '로고스'라는 신성한 이성 구조가 존재한다고 믿었으며, 이 로고스에 순응하는 것이 행복한 삶을 살 수 있는 방법이라고 가르쳤다.
+2. 스토아학파는 감성보다 이성에 절대 우위를 두며, 고난을 견딜 수 없게 만드는 압도적인 고통이 집착에서 오므로 삶에서 마주치는 그 무엇에도 지나치게 애착을 갖지 않는 법을 배워야 한다고 주장했다.
+3. 스토아학파는 죽음이 한 상태에서 다른 상태로 탈바꿈하는 일일 뿐이라고 가르쳤으며, 죽음에 대한 두려움에서 벗어나 현재를 사랑하며 살아가는 것이 중요하다고 강조했다.
 """
 ```
 
@@ -144,7 +150,9 @@ list_of_relevant_contents = chain1.invoke({"question": question, "context": retr
 template_2 = """
    
 # Instruction
-Using the provided ranked list of the top relevant sentences or passages extracted from the retrieved documents, generate a final answer to the given query. Synthesize the information from the ranked list of the top relevant sentences or passages to create a coherent, logical, comprehensive, and concise response.
+Using the provided ranked list of the top relevant sentences or passages extracted from the retrieved documents, 
+generate a final answer to the given query. 
+Synthesize the information from the ranked list of the top relevant sentences or passages to create a coherent, logical, comprehensive, and concise response.
 
 # Query: {question}
 
@@ -183,7 +191,8 @@ final_answer = chain2.invoke({"question":question, "list_of_relevant_contents":l
 """
 "스토아 학파는 인간이 고통에 대처하는 방법으로 다음과 같은 견해를 제시했습니다.
 
-첫째, 스토아 학파는 우주에는 '로고스'라는 신성한 이성 구조가 존재한다고 믿었으며, 이 로고스에 순응하는 것이 행복한 삶을 살 수 있는 방법이라고 가르쳤습니다. 즉, 감성보다 이성에 절대 우위를 두며, 고난을 견딜 수 없게 만드는 압도적인 고통이 집착에서 오므로 삶에서 마주치는 그 무엇에도 지나치게 애착을 갖지 않는 법을 배워야 한다고 주장했습니다.
+첫째, 스토아 학파는 우주에는 '로고스'라는 신성한 이성 구조가 존재한다고 믿었으며, 이 로고스에 순응하는 것이 행복한 삶을 살 수 있는 방법이라고 가르쳤습니다. 
+즉, 감성보다 이성에 절대 우위를 두며, 고난을 견딜 수 없게 만드는 압도적인 고통이 집착에서 오므로 삶에서 마주치는 그 무엇에도 지나치게 애착을 갖지 않는 법을 배워야 한다고 주장했습니다.
 
 둘째, 스토아 학파는 죽음이 한 상태에서 다른 상태로 탈바꿈하는 일일 뿐이라고 가르쳤으며, 죽음에 대한 두려움에서 벗어나 현재를 사랑하며 살아가는 것이 중요하다고 강조했습니다.
 
@@ -194,7 +203,7 @@ final_answer = chain2.invoke({"question":question, "list_of_relevant_contents":l
 
 ### cf) Basic RAG 결과
 
-```prompt
+```
 # Your role
 You are a brilliant assistant for question-answering tasks.
 
@@ -221,7 +230,8 @@ Question:
 ```
 '스토아 학파는 인간이 고통에 대처하는 방법으로 세 가지를 제시했습니다. 
 
-첫째, 예상치 못한 고난과 역경을 신의 섭리이자 결국 유익이 되는 역사로 받아들이는 자세를 가져야 한다고 했습니다. 스토아 학파는 우주가 신성하고 이성적이며 완벽한 질서를 유지하고 있다고 믿었기 때문에, 세상이 보내주는 것을 전폭적으로 받아들이는 삶을 살아야 한다고 주장했습니다.
+첫째, 예상치 못한 고난과 역경을 신의 섭리이자 결국 유익이 되는 역사로 받아들이는 자세를 가져야 한다고 했습니다. 
+스토아 학파는 우주가 신성하고 이성적이며 완벽한 질서를 유지하고 있다고 믿었기 때문에, 세상이 보내주는 것을 전폭적으로 받아들이는 삶을 살아야 한다고 주장했습니다.
 
 둘째, 감성보다 이성에 절대 우위를 두며, 고난을 견딜 수 없게 만드는 압도적인 고통이 집착에서 오므로 삶에서 마주치는 그 무엇에도 지나치게 애착을 갖지 않는 법을 배워야 한다고 했습니다.
 
@@ -231,7 +241,7 @@ Question:
 
 ## References
 
-[1] Anthropic. n.d. ["Chain prompts." In Prompt Engineering.](https://docs.anthropic.com/claude/docs/chain-prompts) Accessed March 28, 2024. https://docs.anthropic.com/claude/docs/chain-prompts{:target="_blank"}
-[2] Arjun, [Improving RAG: using LLMs as reranking agents](https://medium.com/@arjunkmrm/improving-rag-using-llms-as-re-ranking-agents-a6c66839dee5){:target="_blank"} Medium, 2024, https://medium.com/@arjunkmrm/improving-rag-using-llms-as-re-ranking-agents-a6c66839dee5{:target="_blank"}
-[3] L. Martin, [RAG from scratch: Part 6. Query Translation (RAG-Fusion)](https://www.youtube.com/watch?v=77qELPbNgxA&list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x&index=6){:target="_blank"}
-[4] B. Ghosh, [Blueprint for Building Corrective RAG (CRAG)](https://medium.com/@bijit211987/blueprint-for-building-corrective-rag-crag-d6fbfeb7c98e){:target="_blank"} Medium, 2024, https://medium.com/@bijit211987/blueprint-for-building-corrective-rag-crag-d6fbfeb7c98e{:target="_blank"}
+[1] Anthropic. n.d. ["Chain prompts." In Prompt Engineering.](https://docs.anthropic.com/claude/docs/chain-prompts) Accessed March 28, 2024. https://docs.anthropic.com/claude/docs/chain-prompts{:target="_blank"}  
+[2] Arjun, [Improving RAG: using LLMs as reranking agents](https://medium.com/@arjunkmrm/improving-rag-using-llms-as-re-ranking-agents-a6c66839dee5){:target="_blank"} Medium, 2024, https://medium.com/@arjunkmrm/improving-rag-using-llms-as-re-ranking-agents-a6c66839dee5{:target="_blank"}  
+[3] L. Martin, [RAG from scratch: Part 6. Query Translation (RAG-Fusion)](https://www.youtube.com/watch?v=77qELPbNgxA&list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x&index=6){:target="_blank"}  
+[4] B. Ghosh, [Blueprint for Building Corrective RAG (CRAG)](https://medium.com/@bijit211987/blueprint-for-building-corrective-rag-crag-d6fbfeb7c98e){:target="_blank"} Medium, 2024, https://medium.com/@bijit211987/blueprint-for-building-corrective-rag-crag-d6fbfeb7c98e{:target="_blank"}  
