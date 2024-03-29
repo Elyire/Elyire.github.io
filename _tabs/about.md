@@ -4,5 +4,5 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+## [cogdex: 인공지능 기독교 신앙 Assistant](https://www.cogdex.kr/){:target="_blank"}  
+## [디코더 유형 트랜스포머 아키텍처 개론: 초보자를 위한 Conceptual Tutorial](https://cogdex-dtta.streamlit.app/){:target="_blank"}  
