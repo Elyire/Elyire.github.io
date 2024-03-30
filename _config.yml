@@ -14,7 +14,7 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Samuel Yang # the main title
+title: Samuel25147_ # the main title
 
 tagline: Prompt Engineering # it will display as the sub-title
 
@@ -29,7 +29,7 @@ github:
   username: elyire # change to your github username
 
 twitter:
-  username: twitter_username # change to your twitter username
+  username: Samuel25147 # change to your twitter username
 
 social:
   # Change to your full name.
@@ -38,11 +38,11 @@ social:
   email: pwoc517@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    # - https://twitter.com/username # change to your twitter homepage
+    - https://twitter.com/Samuel25147 # change to your twitter homepage
     - https://github.com/elyire # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    # - https://www.linkedin.com/in/sangyang24
 
 # Site Verification Settings
 webmaster_verifications:
