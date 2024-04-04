@@ -14,12 +14,12 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Samuel25147_ # the main title
+title: interActIon_ # the main title
 
-tagline: Prompt Engineering # it will display as the sub-title
+tagline: Prompt First # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  Welcome to interActIon_, where 'Prompt First' is more than just a subtitle—it's the essence of this journey. Dive deep into the world of LLM applications through the art and science of prompt engineering. Here, you'll find everything from beginner's guides to advanced strategies, all aimed at unlocking the full potential of language models with the right prompts. Whether you're developing your first LLM project or seeking to refine your techniques, interActIon_ is your personal guide to making every interaction count.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
