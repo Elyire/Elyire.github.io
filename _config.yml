@@ -19,7 +19,7 @@ title: interActIon_ # the main title
 tagline: Prompt First # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  Welcome to interActIon_, where 'Prompt First' is more than just a subtitle—it's the essence of this journey. Dive deep into the world of LLM applications through the art and science of prompt engineering. Here, you'll find everything from beginner's guides to advanced strategies, all aimed at unlocking the full potential of language models with the right prompts. Whether you're developing your first LLM project or seeking to refine your techniques, interActIon_ is your personal guide to making every interaction count.
+  interActIon_ 블로그는 프롬프트 엔지니어링과 LLM 애플리케이션에 초점을 맞추는 'Prompt First' 관점으로 포스팅합니다. 프롬프트 최적화, 프롬프트 작성 원리 및 작성 기법, 랭체인(LangChain) 활용, RAG(Retrieval-Augmented Generation) 등 프롬프트를 통한 LLM 성능 향상 기법과 활용 사례를 소개합니다. 프롬프트 엔지니어링의 중요성과 방법론을 집중 조명하는 기술 블로그입니다.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
