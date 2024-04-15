@@ -152,4 +152,4 @@ Step 4에서의 테스트 및 평가 결과 분석을 바탕으로, 개발 중�
 ## ***Appendix***
 👉**Tip 1**💡: 프롬프트 개발 과정 전반에 걸쳐, 프롬프트 성능의 상한선을 설정하기 위해 가장 강력한(most capable) 모델과 제약없는 프롬프트 길이로 시작하는 것이 좋습니다. 일단 원하는 출력 품질을 달성하고 나면, 필요에 따라 프롬프트 길이를 줄이거나, 덜 capable한 모델을 사용하는 등의 접근을 통해 지연 시간(latency)과 비용을 최적화할 수 있습니다.  
   
-👉**Tip 2**💡: **평가Evals**와 관련해 [OpenAI의 evals](https://github.com/openai/evals)도 참고해 주세요.
+👉**Tip 2**💡: **평가Evals**와 관련해 [OpenAI의 evals](https://github.com/openai/evals){:target="_blank"}도 참고해 주세요.
