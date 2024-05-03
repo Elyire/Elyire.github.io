@@ -211,7 +211,7 @@ results = final_rag_chain.invoke({"context": retrieved_docs, "question": questio
 
 ## **Summary**
 
-이번 포스팅에서는, HyDE(Hypothetical document embeddings)의 개념 중 '사용자 질문에 대한 가상의 답변 생성'이라는 아이디어와 BM25 retriever를 이용해 얻은 retrieved documents를 맥락(context)으로 한 최종 답변 생성을 통해 성경 의미 검색(Semantic Bible Search, 자연어 질문을 통한 성경 구절 검색)을 구현하는 방법을 알아보았습니다. 
+이번 포스팅에서는 "HyDE(Hypothetical document embeddings)의 개념 중 '사용자 질문에 대한 가상의 답변 생성'이라는 아이디어"와 "BM25 retriever"를 활용해 retrieved documents를 얻고, 이를 맥락(context)으로 하여 최종 답변을 생성함으로써 성경 의미 검색(Semantic Bible Search, 자연어 질문을 통한 성경 구절 검색)을 구현하는 방법을 알아보았습니다.
 
 혹시 관심이 있으신 분은 다음 링크에서 구현된 성경 의미 검색(Semantic Bible Search)을 사용해 보실 수 있습니다. 
 
