@@ -222,4 +222,3 @@ results = final_rag_chain.invoke({"context": retrieved_docs, "question": questio
 
 [1] L. Gao *et al.*, "Precise Zero-Shot Dense Retrieval without Relevance Labels", _arXiv_ **2022**, 2212.10496
 
-
