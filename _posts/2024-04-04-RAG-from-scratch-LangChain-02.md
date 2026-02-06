@@ -4,6 +4,9 @@ date: 2024-04-04 20:10:00 +09:00
 categories: [LLM, LangChain]
 tags: [RAG, 랭체인, LangChain]
 pin: false
+slug: rag-from-scratch-langchain-02
+redirect_from:
+  - /posts/RAG-from-scratch-LangChain-02/
 ---
 ## **Part 10 Routing**
 

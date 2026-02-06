@@ -4,6 +4,9 @@ date: 2024-04-04 20:00:00 +09:00
 categories: [LLM, LangChain]
 tags: [RAG, 랭체인, LangChain]
 pin: false
+slug: rag-from-scratch-langchain-01
+redirect_from:
+  - /posts/RAG-from-scratch-LangChain-01/
 ---
 YouTube의 LangChain 채널에서는 [RAG from Scratch 시리즈](https://www.youtube.com/watch?v=wd7TZ4w1mSw&list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x){:target="_blank"}가 연재되고 있습니다. 본 포스팅은 [LangChain의 X 계정](https://twitter.com/LangChainAI){:target="_blank"}의 소개글을 바탕으로 RAG from Scratch 각 파트가 어떤 내용을 다루고 있는지에 대한 정보를 제공합니다. X 계정의 소개글을 그대로 직역하지 않고, 독자가 이해하기 쉽도록 원문을 의역하고 필요하다면 간단한 설명을 추가하여 작성하였습니다. 
 
@@ -100,5 +103,4 @@ Query Translation에 관한 마지막 영상으로, Gao 등(Gao _et al._)이 제
 
  **🧠 참고자료 (References):**   
  **Hyde:** [https://arxiv.org/abs/2212.10496](https://arxiv.org/abs/2212.10496){:target="_blank"}
-
 

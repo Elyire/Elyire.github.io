@@ -4,6 +4,9 @@ date: 2024-04-15 15:00:00 +09:00
 categories: [프롬프트 엔지니어링, 프롬프트 작성 원리]
 tags: [프롬프트 개발 사이클, 프롬프트 평가, 프롬프트 최적화]
 pin: true
+slug: anthropic-prompt-engineering-cycle
+redirect_from:
+  - /posts/Anthropic-Prompt-Engineering-Cycle/
 ---
 Claude의 개발사인 Anthropic에서 제공하는 프롬프트 엔지니어링 가이드 문서가 있습니다.[1] 이 문서는 서두에서 **프롬프트 개발 사이클(prompt development lifecycle)**에 대해 다룹니다. 그리 길지 않은 내용이지만 프롬프트 개발자들이 꼭 염두에 두어야 할 핵심들을 잘 짚어주고 있다고 생각하여 여기에 소개합니다. 원문의 큰 틀을 따라가되, 그대로 번역하지 않고 제 나름대로 내용을 추가하며 본 포스팅을 구성하였음을 밝힙니다. 원문을 읽기 원하시는 분들은 Reference 1번의 링크를 참고해 주세요. 
 
