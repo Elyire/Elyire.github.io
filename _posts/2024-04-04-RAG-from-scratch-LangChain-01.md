@@ -5,6 +5,7 @@ categories: [LLM, LangChain]
 tags: [RAG, 랭체인, LangChain]
 pin: false
 slug: rag-from-scratch-langchain-01
+permalink: /posts/rag-from-scratch-langchain-01/
 redirect_from:
   - /posts/RAG-from-scratch-LangChain-01/
 ---
@@ -101,6 +102,5 @@ Query Translation에 관한 마지막 영상으로, Gao 등(Gao _et al._)이 제
 
  **💻 코드:** [https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_5_to_9.ipynb](https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_5_to_9.ipynb){:target="_blank"}
 
- **🧠 참고자료 (References):**   
- **Hyde:** [https://arxiv.org/abs/2212.10496](https://arxiv.org/abs/2212.10496){:target="_blank"}
-
+**🧠 참고자료 (References):**   
+**Hyde:** [https://arxiv.org/abs/2212.10496](https://arxiv.org/abs/2212.10496){:target="_blank"}

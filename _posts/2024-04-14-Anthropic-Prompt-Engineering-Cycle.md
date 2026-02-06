@@ -5,6 +5,7 @@ categories: [프롬프트 엔지니어링, 프롬프트 작성 원리]
 tags: [프롬프트 개발 사이클, 프롬프트 평가, 프롬프트 최적화]
 pin: true
 slug: anthropic-prompt-engineering-cycle
+permalink: /posts/anthropic-prompt-engineering-cycle/
 redirect_from:
   - /posts/Anthropic-Prompt-Engineering-Cycle/
 ---

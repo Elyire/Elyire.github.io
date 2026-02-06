@@ -5,6 +5,7 @@ categories: [LLM, LangChain]
 tags: [RAG, 랭체인, LangChain]
 pin: false
 slug: rag-from-scratch-langchain-02
+permalink: /posts/rag-from-scratch-langchain-02/
 redirect_from:
   - /posts/RAG-from-scratch-LangChain-02/
 ---
